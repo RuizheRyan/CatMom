@@ -99,6 +99,7 @@ public class CatController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+
         if (other.CompareTag("trigger"))
         {
             hint.SetActive(true);
@@ -108,6 +109,15 @@ public class CatController : MonoBehaviour
         else
         {
             hint.SetActive(false);
+        }
+
+        if(other.tag == "kitten" && (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)))
+        {
+            Kitten kitten = other.gameObject.transform.root.gameObject.GetComponent<Kitten>();
+            
+            //c# nullable syntax same thing as checking if (kitten != null) kitten.comfort
+            kitten?.Comfort();
+            
         }
     }
 
