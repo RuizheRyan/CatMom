@@ -5113,7 +5113,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6025a89707fffc6489f382643c5a07ec, type: 2}
+      objectReference: {fileID: 9100000, guid: 01c0d2e363b3c4c4ca7cb5084976fd52, type: 2}
     - target: {fileID: 4031830369829927630, guid: 71b340a865dcf734da0c8f533efacd8c,
         type: 3}
       propertyPath: m_BlendShapeWeights.Array.size
