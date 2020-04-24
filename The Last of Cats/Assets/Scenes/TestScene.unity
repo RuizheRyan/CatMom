@@ -959,6 +959,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441835620}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &510861160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1985566206624387925, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1415928196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &536561229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1240,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7897801718126882663, guid: 8978b95e054b2ad42ab0933abae36eea,
     type: 3}
   m_PrefabInstance: {fileID: 7897801717542146436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &629308262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1985566206624387925, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958528492}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &655499067
 GameObject:
@@ -2880,6 +2892,12 @@ Transform:
   m_Father: {fileID: 2142366992}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1681485833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9106983386587307052, guid: 71b340a865dcf734da0c8f533efacd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1572387528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1704185990
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,6 +3058,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7544659187188275463, guid: 3974ebc073c4cba4fbb359e8ca416e0a,
+        type: 3}
+      propertyPath: kittens.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7544659187188275463, guid: 3974ebc073c4cba4fbb359e8ca416e0a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1681485833}
+    - target: {fileID: 7544659187188275463, guid: 3974ebc073c4cba4fbb359e8ca416e0a,
+        type: 3}
+      propertyPath: kittens.Array.data[0]
+      value: 
+      objectReference: {fileID: 629308262}
+    - target: {fileID: 7544659187188275463, guid: 3974ebc073c4cba4fbb359e8ca416e0a,
+        type: 3}
+      propertyPath: kittens.Array.data[1]
+      value: 
+      objectReference: {fileID: 510861160}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3974ebc073c4cba4fbb359e8ca416e0a, type: 3}
 --- !u!1 &1834129258
