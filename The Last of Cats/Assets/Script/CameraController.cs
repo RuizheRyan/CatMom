@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.position + Vector3.up * 4f;
+        transform.position = player.position + Vector3.up * 10f;
         if (Input.GetKeyDown(KeyCode.Q))
         {
             targetDir = Quaternion.Euler(0, -45, 0) * targetDir;
