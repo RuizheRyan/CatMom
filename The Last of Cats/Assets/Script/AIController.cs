@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
+    public float fearDistance;
     Transform player;
     public enum AIStatus { follow, fear, idle, inMouth };
     public AIStatus status;
@@ -13,7 +14,7 @@ public class AIController : MonoBehaviour
     [Range(0, 1)] public float fear;
     [SerializeField] private float fearChangeRate;
 
-    private Animator anim;
+    public Animator anim;
     private Rigidbody rb;
     [SerializeField] private ParticleSystem comfortVFX;
     // Start is called before the first frame update
@@ -21,7 +22,10 @@ public class AIController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
-        anim = gameObject.GetComponent<Animator>();
+        if(anim == null)
+        {
+            anim = gameObject.GetComponent<Animator>();
+        }
     }
 
     // Update is called once per frame
@@ -32,7 +36,9 @@ public class AIController : MonoBehaviour
             case AIStatus.fear:
                 {
                     anim.SetBool("isFear", true);
-                    if(fear <= 0)
+                    anim.SetBool("inMouth", false);
+                    rb.velocity = new Vector3(0, -1, 0);
+                    if (fear <= 0)
                     {
                         status = AIStatus.idle;
                     }
@@ -43,8 +49,10 @@ public class AIController : MonoBehaviour
                     if((player.position - transform.position).magnitude > 0.8f)
                     {
                         anim.SetBool("isWalk", true);
-                        var targetOrientation = (player.position - transform.position).normalized;
-                        var deltaAngle = Vector3.SignedAngle(new Vector3(targetOrientation.x, 0, targetOrientation.z), transform.forward, -Vector3.up);
+                        var targetDirection = player.position - transform.position;
+                        targetDirection.y = 0;
+                        targetDirection = targetDirection.normalized;
+                        var deltaAngle = Vector3.SignedAngle(new Vector3(targetDirection.x, 0, targetDirection.z), transform.forward, -Vector3.up);
                         if (deltaAngle > 5)
                         {
                             transform.Rotate(Vector3.up, Time.deltaTime * rotateSpeed);
@@ -55,7 +63,7 @@ public class AIController : MonoBehaviour
                         }
                         else
                         {
-                            transform.forward = targetOrientation;
+                            transform.forward = targetDirection;
                         }
                         rb.velocity = transform.forward * speed;
                         transform.forward = rb.velocity.normalized;
@@ -69,7 +77,7 @@ public class AIController : MonoBehaviour
                         rb.velocity = new Vector3(0, -1, 0);
                     }
                     //fear when too far from player
-                    if ((player.position - transform.position).magnitude > 8f)
+                    if ((player.position - transform.position).magnitude > fearDistance)
                     {
                         fear += 1 * Time.deltaTime;
                     }
@@ -90,6 +98,17 @@ public class AIController : MonoBehaviour
                     rb.velocity = vel;
                     if (fear >= 0.5)
                     {
+                        status = AIStatus.fear;
+                    }
+                    //fear when too far from player
+                    if ((player.position - transform.position).magnitude > fearDistance)
+                    {
+                        fear += 1 * Time.deltaTime;
+                    }
+                    if (fear >= 1)
+                    {
+                        anim.SetBool("isWalk", false);
+                        rb.velocity = new Vector3(0, -1, 0);
                         status = AIStatus.fear;
                     }
                 }

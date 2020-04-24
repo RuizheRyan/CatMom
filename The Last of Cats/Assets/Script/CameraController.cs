@@ -3,21 +3,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private float speed = 0.007f;
-    private float angleOffset = 45;
-    Vector3 lastMousePos;
-    private float minSize = 1f;
-    private float maxSize = 4.5f;
-    private readonly float _overTime = 0.5f;
-    private bool _running;
     private Transform player;
-    private Vector3 targetDir;
-    private float rotateSpeed = 420;
 
 
     private void Start()
     {
-        targetDir = transform.forward;
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -25,52 +15,29 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.position + Vector3.up * 4f;
-        if (Input.GetKeyDown(KeyCode.Q))
+        transform.position = player.position + Vector3.up * 0.25f;
+        Ray ray = new Ray(transform.position, -transform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 3, ~(1 << 8)))
         {
-            targetDir = Quaternion.Euler(0, -45, 0) * targetDir;
-            rotateSpeed = -Mathf.Abs(rotateSpeed);
+            Debug.DrawLine(ray.origin, hit.point, Color.red);
+            Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Min(0.1f, 0.75f - hit.distance));
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        else
         {
-            targetDir = Quaternion.Euler(0, 45, 0) * targetDir;
-            rotateSpeed = Mathf.Abs(rotateSpeed);
+            Camera.main.transform.localPosition = new Vector3(0, 0, -3);
         }
- 
-        if (Vector3.Angle(targetDir, transform.forward) > 10)
+        if(Input.GetAxis("Mouse X") != 0)
         {
-            transform.Rotate(Vector3.up, Time.deltaTime * rotateSpeed);
+            transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * 3, Space.World);
         }
-        else { transform.forward = targetDir; }
-        if(Vector3.SignedAngle(targetDir, transform.forward, Vector3.up) > 5 && rotateSpeed > 0)
+        if (Input.GetAxis("Mouse Y") < 0 && (transform.eulerAngles.x < 60 || transform.eulerAngles.x > 340))
         {
-            transform.forward = targetDir;
-        }else if (Vector3.SignedAngle(targetDir, transform.forward, Vector3.up) < 5 && rotateSpeed < 0)
-        {
-            transform.forward = targetDir;
+            transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * 1.5f);
         }
-        //if (_gm._count == 0) return;
-        //if (Input.GetAxis("Mouse ScrollWheel") < 0 && Camera.main.orthographicSize < maxSize)
-        //{
-        //    Camera.main.orthographicSize += 0.5f;
-        //}
-        //if (Input.GetAxis("Mouse ScrollWheel") > 0 && Camera.main.orthographicSize > minSize)
-        //{
-        //    Camera.main.orthographicSize -= 0.5f;
-        //}
-        //if (Input.GetMouseButton(2) || Input.GetMouseButton(0))
-        //{
-        //    if(lastMousePos != Vector3.zero)
-        //    {
-        //        Vector3 offset = (lastMousePos - Input.mousePosition) * speed;
-        //        offset = Quaternion.AngleAxis(angleOffset, Vector3.forward) * offset;
-        //        transform.position += new Vector3(offset.x, 0, offset.y);
-        //    }
-        //}
-        //if (Input.GetMouseButtonUp(2) || Input.GetMouseButton(0))
-        //{
-        //    lastMousePos = Vector3.zero;
-        //}
-        //lastMousePos = Input.mousePosition;
+        if (Input.GetAxis("Mouse Y") > 0 && (transform.eulerAngles.x > 350 || (transform.eulerAngles.x > 0 && transform.eulerAngles.x < 70)))
+        {
+            transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * 1.5f);
+        }
     }
 }

@@ -20,6 +20,7 @@ public class CatController : MonoBehaviour
     [SerializeField]
     private Transform mouth;
     private GameObject kitten;
+    private bool isGrounded;
     void Start()
     {
         mouth = mouth == null ? GameObject.Find("MouthPos").transform : mouth;
@@ -48,7 +49,7 @@ public class CatController : MonoBehaviour
             }
             else if (Input.GetMouseButtonDown(0))
             {
-                if (ac.status != AIController.AIStatus.inMouth)
+                if (ac.status != AIController.AIStatus.inMouth && !isCarrying)
                 {
                     isCarrying = true;
                     ac.status = AIController.AIStatus.inMouth; 
@@ -61,14 +62,38 @@ public class CatController : MonoBehaviour
                 else
                 {
                     isCarrying = false;
-                    ac.status = ac.fear >= 1 ? AIController.AIStatus.fear : AIController.AIStatus.idle;
+                    if (ac.fear >= 1)
+                    {
+                        ac.status = AIController.AIStatus.fear;
+                        ac.anim.SetBool("isFear", true);
+                        ac.anim.SetBool("inMouth", false);
+                    }
+                    else
+                    {
+                        ac.status = AIController.AIStatus.idle;
+                        ac.anim.SetBool("inMouth", false);
+                        ac.anim.SetBool("isFear", false);
+                    }
+                    //ac.status = ac.fear >= 1 ? AIController.AIStatus.fear : AIController.AIStatus.idle;
                     var kittenTrans = kitten.transform;
                     kittenTrans.SetParent(null);
+                    kittenTrans.rotation = Quaternion.identity;
                     kittenTrans.GetComponent<Collider>().enabled = true;
                 }
             }
         }
 
+        #region move
+        Ray groundRay = new Ray(transform.position + Vector3.up * 0.25f, Vector3.down);
+        RaycastHit groundHit;
+        if (Physics.Raycast(groundRay, out groundHit, 0.25f))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
         if (controller.isGrounded)
         {
             var rotation = Quaternion.Euler(0, cameraController.transform.eulerAngles.y, 0);
@@ -106,7 +131,7 @@ public class CatController : MonoBehaviour
         controller.Move(moveDirection * (Input.GetKey(KeyCode.LeftShift) ? runSpeed : speed) * Time.deltaTime);
 
         catAnimator.SetBool("isRun", (Input.GetKey(KeyCode.LeftShift) ? true : false));
-
+        #endregion
         //lastTime = gameManager._time;
 
         if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl) ) {

@@ -20,13 +20,13 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
-    GameObject player;
-    GameObject[] kittens;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject[] kittens;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        kittens = GameObject.FindGameObjectsWithTag("kitten");
+        //player = GameObject.FindGameObjectWithTag("Player");
+        //kittens = GameObject.FindGameObjectsWithTag("kitten");
     }
 
     // Update is called once per frame

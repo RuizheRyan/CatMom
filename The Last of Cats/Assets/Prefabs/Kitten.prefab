@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 9106983387223475272}
   - component: {fileID: 9106983387223475273}
   - component: {fileID: 9106983387223475270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Kitten
   m_TagString: kitten
   m_Icon: {fileID: 0}
@@ -502,8 +502,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 5
-  m_Height: 15
+  m_Radius: 6
+  m_Height: 18
   m_Direction: 2
   m_Center: {x: 0, y: 2.4, z: 0}
 --- !u!114 &9106983387223475270
@@ -518,11 +518,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d790a194cb1046b4d9ebe2fc61902ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fearDistance: 6
   status: 2
-  speed: 2
+  speed: 3
   rotateSpeed: 350
   fear: 0
   fearChangeRate: 0.5
+  anim: {fileID: 4854739560529103932}
   comfortVFX: {fileID: 7344426314515461066}
 --- !u!1 &2044250005768083824
 GameObject:
