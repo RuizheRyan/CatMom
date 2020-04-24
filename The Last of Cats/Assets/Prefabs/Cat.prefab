@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1290452746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290452747}
+  m_Layer: 0
+  m_Name: MousePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290452747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290452746}
+  m_LocalRotation: {x: -0.20539768, y: -0.58771044, z: -0.7665569, w: -0.1574763}
+  m_LocalPosition: {x: 0, y: 0.0176, z: -0.0295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1941672767173686914}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -56.755, y: 65.79, z: -241.736}
 --- !u!1 &154579944483401691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1360,7 @@ Transform:
   - {fileID: 6842851172473808146}
   - {fileID: 1645985858378554450}
   - {fileID: 7187748372915294128}
+  - {fileID: 1290452747}
   m_Father: {fileID: 8915452153247946698}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1435,9 +1466,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2857342099726249960}
   - component: {fileID: 4031830369829927630}
+  - component: {fileID: 200294623}
   m_Layer: 0
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,6 +1502,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1539,12 +1572,26 @@ SkinnedMeshRenderer:
   - {fileID: 7351536563474075217}
   - {fileID: 5021763421919517829}
   - {fileID: 7162395094668671512}
-  m_BlendShapeWeights: []
+  m_BlendShapeWeights:
+  - 0
   m_RootBone: {fileID: 8632637722011865992}
   m_AABB:
     m_Center: {x: 0.000000022817403, y: 0.01947172, z: 0.005667432}
     m_Extent: {x: 0.014551349, y: 0.053787626, z: 0.029104687}
   m_DirtyAABB: 0
+--- !u!135 &200294623
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673917820561466155}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.030651843
+  m_Center: {x: -0.025065664, y: 0.00682267, z: 0.026743472}
 --- !u!1 &8738188842853963573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,8 +1758,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5204429418218221119}
   - component: {fileID: 2788813640275968837}
-  - component: {fileID: 955726524225733927}
   - component: {fileID: 955726524225733926}
+  - component: {fileID: 955726524225733927}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Player
@@ -1746,7 +1793,7 @@ Animator:
   m_GameObject: {fileID: 9106983386587307052}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 17d2301a1ec2032419b22c0ec305245e, type: 3}
-  m_Controller: {fileID: 9100000, guid: 55328451dba93cb4b98f2e66e1b80025, type: 2}
+  m_Controller: {fileID: 9100000, guid: 01c0d2e363b3c4c4ca7cb5084976fd52, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1755,24 +1802,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &955726524225733927
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106983386587307052}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 3.8
-  m_Radius: 0.68
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.03
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2.05, z: 0}
 --- !u!114 &955726524225733926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1788,10 +1817,30 @@ MonoBehaviour:
   cameraController: {fileID: 6829367315812759849, guid: 7cefbe3faac372b42850998da906638f,
     type: 3}
   speed: 3
-  jumpSpeed: 2
+  jumpSpeed: 2.5
   gravity: 10
-  rotateSpeed: 500
-  hint: {fileID: 6690516732625342740, guid: 184333f5118613d45b55bb46f6d73b2b, type: 3}
+  rotateSpeed: 400
+  tip: {fileID: 6690516732625342740, guid: 184333f5118613d45b55bb46f6d73b2b, type: 3}
+  isCarrying: 0
+  mouth: {fileID: 1290452747}
+--- !u!143 &955726524225733927
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9106983386587307052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 3.8
+  m_Radius: 0.68
+  m_SlopeLimit: 45
+  m_StepOffset: 0
+  m_SkinWidth: 0.03
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 2.05, z: 0}
 --- !u!1 &9160351155033852176
 GameObject:
   m_ObjectHideFlags: 0

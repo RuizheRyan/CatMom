@@ -9,21 +9,25 @@ public class CatController : MonoBehaviour
     public float jumpSpeed;
     public float gravity;
     public float rotateSpeed;
-    public GameObject hint;
+    public GameObject tip;
+    public bool isCarrying;
     private Vector3 moveDirection = Vector3.zero;
     private float deltaAngle;
     private Animator catAnimator;
     private CharacterController controller;
     private float runSpeed;
     private float buffer, lastTime;
-
+    [SerializeField]
+    private Transform mouth;
+    private GameObject kitten;
     void Start()
     {
+        mouth = mouth == null ? GameObject.Find("MouthPos").transform : mouth;
         buffer = 0.0f;
         runSpeed = speed * 1.7f;
-        hint = GameObject.Instantiate(hint);
-        hint.SetActive(false);
-        hint.transform.SetParent(transform);
+        tip = GameObject.Instantiate(tip);
+        tip.SetActive(false);
+        tip.transform.SetParent(transform);
         catAnimator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
     }
@@ -34,6 +38,37 @@ public class CatController : MonoBehaviour
 
     private void Update()
     {
+        if (kitten != null)
+        {
+            AIController ac = kitten.gameObject.GetComponent<AIController>();
+            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl))
+            {
+                //c# nullable syntax same thing as checking if (kitten != null) kitten.comfort
+                ac?.Comfort();
+            }
+            else if (Input.GetMouseButtonDown(0))
+            {
+                if (ac.status != AIController.AIStatus.inMouth)
+                {
+                    isCarrying = true;
+                    ac.status = AIController.AIStatus.inMouth; 
+                    var kittenTrans = kitten.transform;
+                    kittenTrans.SetParent(mouth);
+                    kittenTrans.GetComponent<Collider>().enabled = false;
+                    kittenTrans.localPosition = Vector3.zero;
+                    kittenTrans.localRotation = Quaternion.identity;
+                }
+                else
+                {
+                    isCarrying = false;
+                    ac.status = ac.fear >= 1 ? AIController.AIStatus.fear : AIController.AIStatus.idle;
+                    var kittenTrans = kitten.transform;
+                    kittenTrans.SetParent(null);
+                    kittenTrans.GetComponent<Collider>().enabled = true;
+                }
+            }
+        }
+
         if (controller.isGrounded)
         {
             var rotation = Quaternion.Euler(0, cameraController.transform.eulerAngles.y, 0);
@@ -62,7 +97,7 @@ public class CatController : MonoBehaviour
                 catAnimator.SetBool("isWalk", false);
                 catAnimator.SetFloat("walkSpeed", 0);
             }
-            if (Input.GetButton("Jump"))
+            if (Input.GetButtonDown("Jump"))
             {
                 moveDirection.y = jumpSpeed;
             }
@@ -86,38 +121,24 @@ public class CatController : MonoBehaviour
         {
             catAnimator.SetBool("isClean", false);
         }
-
-        //if (gameManager.isSleeped)
-        //{
-        //    catAnimator.SetBool("isSleep", true);
-        //}
-        //else
-        //{
-        //    catAnimator.SetBool("isSleep", false);
-        //}
     }
 
     private void OnTriggerStay(Collider other)
     {
-
         if (other.CompareTag("trigger"))
         {
-            hint.SetActive(true);
-            hint.transform.position = transform.position + Vector3.up * 0.6f + transform.forward * 0.3f;
-            hint.transform.LookAt(Camera.main.transform);
+            tip.SetActive(true);
+            tip.transform.position = transform.position + Vector3.up * 0.6f + transform.forward * 0.3f;
+            tip.transform.LookAt(Camera.main.transform);
         }
         else
         {
-            hint.SetActive(false);
+            tip.SetActive(false);
         }
 
-        if(other.tag == "kitten" && (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)))
+        if(other.tag == "kitten")
         {
-            Kitten kitten = other.gameObject.transform.root.gameObject.GetComponent<Kitten>();
-            
-            //c# nullable syntax same thing as checking if (kitten != null) kitten.comfort
-            kitten?.Comfort();
-            
+            kitten = other.gameObject;
         }
     }
 
@@ -133,8 +154,13 @@ public class CatController : MonoBehaviour
     {
         if (other.CompareTag("trigger"))
         {
-            hint.SetActive(false);
+            tip.SetActive(false);
             other.transform.GetComponentInParent<Renderer>().material.SetFloat("_Emission", 0) ;
+        }
+
+        if (other.tag == "kitten")
+        {
+            kitten = null;
         }
     }
 }
