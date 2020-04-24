@@ -87,14 +87,17 @@ public class CatController : MonoBehaviour
             catAnimator.SetBool("isClean", false);
         }
 
-        //if (gameManager.isSleeped)
-        //{
-        //    catAnimator.SetBool("isSleep", true);
-        //}
-        //else
-        //{
-        //    catAnimator.SetBool("isSleep", false);
-        //}
+        // Hold & put down the kitten
+        if (Input.GetKeyUp(KeyCode.RightControl))
+        {
+            GameManager.toHoldKitten = true;
+        }
+
+        // Comfort the kitten
+        if (Input.GetKeyUp(KeyCode.RightAlt))
+        {
+            GameManager.comfortKitten = true;
+        }
     }
 
     private void OnTriggerStay(Collider other)

@@ -10,7 +10,11 @@ public class CameraController : MonoBehaviour
     private float maxSize = 4.5f;
     private readonly float _overTime = 0.5f;
     private bool _running;
+
+    public static bool isPlayer = true;
     private Transform player;
+    private Transform kitten;
+
     private Vector3 targetDir;
     private float rotateSpeed = 420;
 
@@ -19,13 +23,14 @@ public class CameraController : MonoBehaviour
     {
         targetDir = transform.forward;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        kitten = GameObject.FindGameObjectWithTag("kitten").transform;
     }
 
 
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.position + Vector3.up * 4f;
+        transform.position = (isPlayer?player.position:kitten.position) + Vector3.up * 4f;
         if (Input.GetKeyDown(KeyCode.Q))
         {
             targetDir = Quaternion.Euler(0, -45, 0) * targetDir;
