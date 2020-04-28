@@ -4,11 +4,13 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private Transform player;
-
+    private Material catMat;
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        catMat = player.GetComponentInChildren<Renderer>().material;
     }
 
 
@@ -21,7 +23,8 @@ public class CameraController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 3, ~(1 << 8)))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.red);
-            Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Min(0.1f, 0.75f - hit.distance));
+            Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Min(0.1f, 0.1f - hit.distance));
+            catMat.SetFloat("_Alpha", (hit.distance - 0.7f) / 0.5f);
         }
         else
         {
@@ -37,7 +40,7 @@ public class CameraController : MonoBehaviour
         }
         if (Input.GetAxis("Mouse Y") > 0 && (transform.eulerAngles.x > 350 || (transform.eulerAngles.x > 0 && transform.eulerAngles.x < 70)))
         {
-            transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * 1.5f);
+            transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * 1f);
         }
     }
 }
