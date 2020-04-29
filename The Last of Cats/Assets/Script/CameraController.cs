@@ -24,11 +24,12 @@ public class CameraController : MonoBehaviour
         {
             Debug.DrawLine(ray.origin, hit.point, Color.red);
             Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Min(0.1f, 0.1f - hit.distance));
-            catMat.SetFloat("_Alpha", (hit.distance - 0.7f) / 0.5f);
+            catMat.SetFloat("_Alpha", Mathf.Clamp01((hit.distance - 0.7f) / 0.5f));
         }
         else
         {
             Camera.main.transform.localPosition = new Vector3(0, 0, -3);
+            catMat.SetFloat("_Alpha", 1);
         }
         if(Input.GetAxis("Mouse X") != 0)
         {
