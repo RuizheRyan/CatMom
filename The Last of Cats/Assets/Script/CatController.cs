@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class CatController : MonoBehaviour
 {
-    public GameObject cameraController ;
+    public GameObject cameraController;
     public float speedMax;
     public float speed;
+    public float runSpeed;
     public float jumpSpeed;
     public float gravity;
     public float rotateSpeed;
+    public float runRotateSpeed;
     public GameObject tip;
     public bool isCarrying;
-    private Vector3 moveDirection = Vector3.zero;
+    public float fallingSpeed;
+
+    //private Vector3 moveDirection = Vector3.zero;
     private float deltaAngle;
     private Animator catAnimator;
-    private CharacterController controller;
-    private float runSpeed;
+    //private CharacterController controller;
     private float buffer, lastTime;
     [SerializeField]
     private Transform mouth;
     private GameObject kitten;
     private bool isGrounded;
+    private Rigidbody rb;
     void Start()
     {
         mouth = mouth == null ? GameObject.Find("MouthPos").transform : mouth;
@@ -30,11 +34,24 @@ public class CatController : MonoBehaviour
         tip.SetActive(false);
         tip.transform.SetParent(transform);
         catAnimator = GetComponent<Animator>();
-        controller = GetComponent<CharacterController>();
+        //controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        runSpeed = runSpeed == 0 ? speed * 2 : runSpeed;
+        runRotateSpeed = runRotateSpeed == 0 ? rotateSpeed / 2 : runRotateSpeed;
     }
-    void LateUpdate()
+    void FixedUpdate()
     {
-        
+        Ray groundRay = new Ray(transform.position + Vector3.up * 0.25f, Vector3.down);
+        RaycastHit groundHit;
+        if (Physics.Raycast(groundRay, out groundHit, 0.26f))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+        Debug.DrawLine(groundRay.origin, groundHit.point, Color.red);
     }
 
     private void Update()
@@ -42,7 +59,7 @@ public class CatController : MonoBehaviour
         if (kitten != null)
         {
             AIController ac = kitten.gameObject.GetComponent<AIController>();
-            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl))
+            if ((Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) && !isCarrying)
             {
                 //c# nullable syntax same thing as checking if (kitten != null) kitten.comfort
                 ac?.Comfort();
@@ -55,6 +72,7 @@ public class CatController : MonoBehaviour
                     ac.status = AIController.AIStatus.inMouth; 
                     var kittenTrans = kitten.transform;
                     kittenTrans.SetParent(mouth);
+                    kitten.GetComponent<Rigidbody>().isKinematic = true;
                     kittenTrans.GetComponent<Collider>().enabled = false;
                     kittenTrans.localPosition = Vector3.zero;
                     kittenTrans.localRotation = Quaternion.identity;
@@ -78,64 +96,74 @@ public class CatController : MonoBehaviour
                     var kittenTrans = kitten.transform;
                     kittenTrans.SetParent(null);
                     kittenTrans.rotation = Quaternion.identity;
+                    kitten.GetComponent<Rigidbody>().isKinematic = false;
                     kittenTrans.GetComponent<Collider>().enabled = true;
                 }
             }
         }
 
         #region move
-        Ray groundRay = new Ray(transform.position + Vector3.up * 0.25f, Vector3.down);
-        RaycastHit groundHit;
-        if (Physics.Raycast(groundRay, out groundHit, 0.25f))
+
+        var rotation = Quaternion.Euler(0, cameraController.transform.eulerAngles.y, 0);
+        var targetDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        targetDir = rotation * targetDir.normalized * Mathf.Min(targetDir.magnitude, 1);
+
+        transform.forward = Vector3.RotateTowards(transform.forward, targetDir, rotateSpeed * Time.deltaTime, 0);
+
+        //deltaAngle = (Vector3.Dot(transform.forward, targetDir.normalized) + 1) * Vector3.Dot(transform.right, targetDir) > 0 ? 1 : -1;
+        if(Vector3.Dot(transform.right, targetDir) > 0)
         {
-            isGrounded = true;
+            deltaAngle = Vector3.Dot(targetDir.normalized, -transform.forward) * 0.25f + 0.75f;
         }
         else
         {
-            isGrounded = false;
+            deltaAngle = Vector3.Dot(targetDir.normalized, transform.forward) * 0.25f + 0.25f;
         }
-        if (controller.isGrounded)
+        deltaAngle = deltaAngle * 1.2f - 0.1f;
+        if (targetDir.magnitude != 0)
         {
-            var rotation = Quaternion.Euler(0, cameraController.transform.eulerAngles.y, 0);
-            var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            dir = rotation * dir.normalized * Mathf.Min(dir.magnitude, 1);
-            
-            deltaAngle = Vector3.SignedAngle(new Vector3(dir.x, 0, dir.z), transform.forward, -Vector3.up);
-            if (deltaAngle > 5)
+            catAnimator.SetBool("isWalk", true);
+            catAnimator.SetFloat("walkSpeed", targetDir.magnitude);
+            var tempAngle = catAnimator.GetFloat("deltaAngle");
+            var deltaStep = Time.deltaTime * 1.5f;
+            if(deltaAngle > tempAngle + 0.01f)
             {
-                transform.Rotate(Vector3.up, Time.deltaTime * rotateSpeed);
+                catAnimator.SetFloat("deltaAngle", tempAngle + deltaStep);
             }
-            else if (deltaAngle < -5)
+            else if(deltaAngle < tempAngle - 0.01f)
             {
-                transform.Rotate(Vector3.up, Time.deltaTime * -rotateSpeed);
-            }
-            
-            moveDirection = transform.forward * dir.magnitude;
-            if (moveDirection != Vector3.zero)
-            {
-                catAnimator.SetBool("isWalk", true);
-                catAnimator.SetFloat("walkSpeed", moveDirection.magnitude);
-                catAnimator.SetFloat("deltaAngle",( deltaAngle / 360  * dir.magnitude)+ 0.5f);
+                catAnimator.SetFloat("deltaAngle", tempAngle - deltaStep);
             }
             else
             {
-                catAnimator.SetBool("isWalk", false);
-                catAnimator.SetFloat("walkSpeed", 0);
+                catAnimator.SetFloat("deltaAngle", deltaAngle);
             }
-            if (Input.GetButtonDown("Jump"))
-            {
-                moveDirection.y = jumpSpeed;
-            }
+            //catAnimator.SetFloat("deltaAngle", (deltaAngle + 2) / 4 > tempAngle ? tempAngle + deltaStep : tempAngle - deltaStep);
         }
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * (Input.GetKey(KeyCode.LeftShift) ? runSpeed : speed) * Time.deltaTime);
+        else
+        {
+            catAnimator.SetBool("isWalk", false);
+            catAnimator.SetFloat("walkSpeed", 0);
+        }
+
+        var tempVel = rb.velocity;
+        tempVel = transform.forward * (Input.GetKey(KeyCode.LeftShift) ? runSpeed : speed) * targetDir.magnitude;
+        tempVel.y = rb.velocity.y - Time.deltaTime * fallingSpeed;
+        rb.velocity = tempVel;
 
         catAnimator.SetBool("isRun", (Input.GetKey(KeyCode.LeftShift) ? true : false));
         #endregion
-        //lastTime = gameManager._time;
 
-        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl) ) {
-            
+        if (isGrounded)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                rb.velocity = new Vector3(rb.velocity.x, jumpSpeed, rb.velocity.z);
+            }
+        }
+
+        if ((Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) && !isCarrying) 
+        {
             catAnimator.SetBool("isClean", true);
             if(buffer >= 1)
             {

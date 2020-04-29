@@ -110,6 +110,24 @@ MonoBehaviour:
   - Name: Desktop
     Value: 776
   Exists: 1
+--- !u!114 &-2075576302939071042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.bank
+  m_EditorClassIdentifier: 
+  Path: ../LOC/Build/Desktop/Cat.bank
+  SubDir: 
+  lastModified: 637237158347225736
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,15 +142,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 1079605397654594633}
-  - {fileID: -4422496767380810919}
+  - {fileID: -2075576302939071042}
   EditorEvents:
   - {fileID: 6371331451018001897}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4422496767380810919}
+  - {fileID: -2075576302939071042}
   StringsBanks:
   - {fileID: 1079605397654594633}
-  stringsBankWriteTime: 637236973388489650
+  stringsBankWriteTime: 637237158347225736
   cacheVersion: 3
 --- !u!114 &1079605397654594633
 MonoBehaviour:
@@ -148,11 +166,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../LOC/Build/Desktop/Cat.strings.bank
   SubDir: 
-  lastModified: 637236973388489650
+  lastModified: 637237158347225736
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 776
+  Exists: 1
+--- !u!114 &1536558074845361645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &2883963848622129102
 MonoBehaviour:
@@ -234,12 +269,12 @@ MonoBehaviour:
   Path: event:/Fear
   guid: 58d79b61cd8e3046bb1eb04da8ec190d
   Banks:
-  - {fileID: -4422496767380810919}
+  - {fileID: -2075576302939071042}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 5306208048483433089}
+  - {fileID: 1536558074845361645}
   MinDistance: 0
   MaxDistance: 0
   Length: 3500

@@ -34,11 +34,11 @@ public class CameraController : MonoBehaviour
 
         if(Input.GetAxis("Mouse X") != 0)
         {
-            transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * 3, Space.World);
+            transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * 2, Space.World);
         }
         if (Input.GetAxis("Mouse Y") < 0 && (transform.eulerAngles.x < 60 || transform.eulerAngles.x > 340))
         {
-            transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * 1.5f);
+            transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * 1f);
         }
         if (Input.GetAxis("Mouse Y") > 0 && (transform.eulerAngles.x > 350 || (transform.eulerAngles.x > 0 && transform.eulerAngles.x < 70)))
         {
