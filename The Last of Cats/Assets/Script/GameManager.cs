@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
     }
     [SerializeField] GameObject player;
     [SerializeField] GameObject[] kittens;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,15 +35,32 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !player.GetComponent<CatController>().isCarrying)
+
+        float fear = 0;
+        Vector3 dir = player.transform.forward;
+        foreach (var i in kittens)
         {
-            foreach(var i in kittens)
+            // Follow mother
+            if (Input.GetMouseButtonDown(0) && !player.GetComponent<CatController>().isCarrying && i.GetComponent<AIController>().status != AIController.AIStatus.fear)
             {
-                if(i.GetComponent<AIController>().status != AIController.AIStatus.fear)
-                {
-                    i.GetComponent<AIController>().status = AIController.AIStatus.follow;
-                }
+                i.GetComponent<AIController>().status = AIController.AIStatus.follow;
+            }
+
+            // To record the max fear value
+            if (i.GetComponent<AIController>().fear > fear)
+            {
+                fear = i.GetComponent<AIController>().fear;
+                dir = i.transform.position - player.transform.position;
             }
         }
+
+        // if any kitten is fear and the mother move opposite, slow the mother
+        if (Cross(dir, player.transform.forward) <= 0.0f) player.GetComponent<CatController>().speed = player.GetComponent<CatController>().speedMax * (1.0f - 0.7f * fear);
+        else player.GetComponent<CatController>().speed = player.GetComponent<CatController>().speedMax;
+    }
+
+    float Cross(Vector3 v1, Vector3 v2) 
+    {
+        return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
     }
 }

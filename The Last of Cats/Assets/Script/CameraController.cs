@@ -30,6 +30,7 @@ public class CameraController : MonoBehaviour
         {
             Camera.main.transform.localPosition = new Vector3(0, 0, -3);
         }
+
         if(Input.GetAxis("Mouse X") != 0)
         {
             transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * 3, Space.World);

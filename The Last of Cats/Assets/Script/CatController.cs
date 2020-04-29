@@ -5,6 +5,7 @@ using UnityEngine;
 public class CatController : MonoBehaviour
 {
     public GameObject cameraController ;
+    public float speedMax;
     public float speed;
     public float jumpSpeed;
     public float gravity;
@@ -25,7 +26,6 @@ public class CatController : MonoBehaviour
     {
         mouth = mouth == null ? GameObject.Find("MouthPos").transform : mouth;
         buffer = 0.0f;
-        runSpeed = speed * 1.7f;
         tip = GameObject.Instantiate(tip);
         tip.SetActive(false);
         tip.transform.SetParent(transform);

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+using UnityEditor;
 
 public class AIController : MonoBehaviour
 {
@@ -17,6 +19,12 @@ public class AIController : MonoBehaviour
     public Animator anim;
     private Rigidbody rb;
     [SerializeField] private ParticleSystem comfortVFX;
+
+    // The fear sound
+    [FMODUnity.EventRef]
+    public string fearSoundPath;
+    FMOD.Studio.EventInstance fearSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +34,17 @@ public class AIController : MonoBehaviour
         {
             anim = gameObject.GetComponent<Animator>();
         }
+
+        // Instantiate the fear sound
+        fearSound = FMODUnity.RuntimeManager.CreateInstance(fearSoundPath);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Change the volume of the sound
+        fearSound.setParameterByName("Distance", fear);
+
         switch (status)
         {
             case AIStatus.fear:
@@ -85,7 +99,7 @@ public class AIController : MonoBehaviour
                     {
                         anim.SetBool("isWalk", false);
                         rb.velocity = new Vector3(0, -1, 0);
-                        status = AIStatus.fear;
+                        setStatus(AIStatus.fear);
                     }
                 }
                 break;
@@ -98,7 +112,7 @@ public class AIController : MonoBehaviour
                     rb.velocity = vel;
                     if (fear >= 0.5)
                     {
-                        status = AIStatus.fear;
+                        setStatus(AIStatus.fear);
                     }
                     //fear when too far from player
                     if ((player.position - transform.position).magnitude > fearDistance)
@@ -109,7 +123,7 @@ public class AIController : MonoBehaviour
                     {
                         anim.SetBool("isWalk", false);
                         rb.velocity = new Vector3(0, -1, 0);
-                        status = AIStatus.fear;
+                        setStatus(AIStatus.fear);
                     }
                 }
                 break;
@@ -123,6 +137,7 @@ public class AIController : MonoBehaviour
                 break;
         }
     }
+
     public void Comfort()
     {
         if (fear > 0)
@@ -133,5 +148,11 @@ public class AIController : MonoBehaviour
                 comfortVFX.Play();
             }
         }
+    }
+
+    public void setStatus(AIStatus status) 
+    {
+        this.status = status;
+        if (status == AIStatus.fear) { fearSound.start(); }
     }
 }

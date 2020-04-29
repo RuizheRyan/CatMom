@@ -526,6 +526,7 @@ MonoBehaviour:
   fearChangeRate: 0.5
   anim: {fileID: 4854739560529103932}
   comfortVFX: {fileID: 7344426314515461066}
+  fearSoundPath: event:/Fear
 --- !u!1 &2044250005768083824
 GameObject:
   m_ObjectHideFlags: 0

@@ -1815,7 +1815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraController: {fileID: 0}
+  speedMax: 3
   speed: 3
+  jumpSpeedMax: 2.8
   jumpSpeed: 2.8
   gravity: 10
   rotateSpeed: 400
