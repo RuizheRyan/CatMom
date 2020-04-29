@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 0
+  HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../Homework/Game 270-255/Project 2/LOC/LOC.fspro
-  sourceBankPath: ..\..\..\Homework\Game 270-255\Project 2\LOC\Build
+  sourceProjectPath: ../LOC/LOC.fspro
+  sourceBankPath: ..\LOC\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
