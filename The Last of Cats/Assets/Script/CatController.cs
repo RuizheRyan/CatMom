@@ -54,6 +54,32 @@ public class CatController : MonoBehaviour
             isGrounded = false;
         }
         Debug.DrawLine(groundRay.origin, groundHit.point, Color.red);
+
+        Ray forwardRay = new Ray(transform.position + transform.forward * -0.1f + Vector3.up * 0.1f, transform.forward);
+        RaycastHit forwardHit;
+        if (Physics.Raycast(forwardRay, out forwardHit, 0.75f))
+        {
+            if (forwardHit.transform.CompareTag("kitten"))
+            {
+                if(kitten != null && forwardHit.transform.name != kitten.name)
+                {
+                    kitten?.GetComponent<AIController>().SetHighLight(false);
+                }
+                kitten = forwardHit.transform.gameObject;
+                kitten.GetComponent<AIController>().SetHighLight(true);
+            }
+            else
+            {
+                kitten?.GetComponent<AIController>().SetHighLight(false);
+                kitten = null;
+            }
+        }
+        else
+        {
+            kitten?.GetComponent<AIController>().SetHighLight(false);
+            kitten = null;
+        }
+        Debug.DrawLine(forwardRay.origin, forwardRay.origin + transform.forward * 0.75f, Color.green);
     }
 
     private void Update()
@@ -198,10 +224,10 @@ public class CatController : MonoBehaviour
             tip.SetActive(false);
         }
 
-        if(other.tag == "kitten")
-        {
-            kitten = other.gameObject;
-        }
+        //if(other.tag == "kitten")
+        //{
+        //    kitten = other.gameObject;
+        //}
     }
 
     private void OnTriggerEnter(Collider other)
@@ -220,9 +246,9 @@ public class CatController : MonoBehaviour
             other.transform.GetComponentInParent<Renderer>().material.SetFloat("_Emission", 0) ;
         }
 
-        if (other.tag == "kitten")
-        {
-            kitten = null;
-        }
+        //if (other.tag == "kitten")
+        //{
+        //    kitten = null;
+        //}
     }
 }

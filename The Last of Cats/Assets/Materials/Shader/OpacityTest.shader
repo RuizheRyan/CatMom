@@ -8,6 +8,7 @@
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
         _Alpha ("Alpha", Range(0,1)) = 0.5
+        _RimLight("RimLight", Range(0,1)) = 0.5
     }
     SubShader
     {
@@ -32,10 +33,13 @@
         struct Input
         {
             float2 uv_MainTex;
+            float3 viewDir;
+            INTERNAL_DATA
         };
 
         half _Glossiness;
         half _Metallic;
+        half _RimLight;
         half _Alpha;
         fixed4 _Color;
 
@@ -51,6 +55,8 @@
             // Albedo comes from a texture tinted by color
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
             o.Albedo = c.rgb;
+            fixed3 rimColor = fixed3(1, 0.5, 0);
+            o.Emission = pow((1.0 - dot(o.Normal, normalize(IN.viewDir))) , 8) * _RimLight * rimColor * 5;
             //normal
             o.Normal = UnpackNormal (tex2D (_NormalMap, IN.uv_MainTex));
             // Metallic and smoothness come from slider variables

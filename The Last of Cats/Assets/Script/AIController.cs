@@ -26,6 +26,8 @@ public class AIController : MonoBehaviour
     FMOD.Studio.EventInstance fearSound;
 
     public Vector3 targetPosition;
+    
+    Material material;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class AIController : MonoBehaviour
 
         // Instantiate the fear sound
         fearSound = FMODUnity.RuntimeManager.CreateInstance(fearSoundPath);
+        material =  GetComponentInChildren<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -177,5 +180,11 @@ public class AIController : MonoBehaviour
         {
             targetPosition = position;
         }
+    }
+
+    public void SetHighLight(bool isHighLight)
+    {
+        material.SetFloat("_RimLight", isHighLight ? 1 : 0);
+        return;
     }
 }
