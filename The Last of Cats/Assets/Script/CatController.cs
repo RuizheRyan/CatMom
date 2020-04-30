@@ -14,6 +14,7 @@ public class CatController : MonoBehaviour
     public float runRotateSpeed;
     public GameObject tip;
     public bool isCarrying;
+    public bool isCalling;
     public float fallingSpeed;
 
     //private Vector3 moveDirection = Vector3.zero;
@@ -39,6 +40,7 @@ public class CatController : MonoBehaviour
         runSpeed = runSpeed == 0 ? speed * 2 : runSpeed;
         runRotateSpeed = runRotateSpeed == 0 ? rotateSpeed / 2 : runRotateSpeed;
     }
+
     void FixedUpdate()
     {
         Ray groundRay = new Ray(transform.position + Vector3.up * 0.25f, Vector3.down);
@@ -56,6 +58,12 @@ public class CatController : MonoBehaviour
 
     private void Update()
     {
+        // To call kitten back
+        if (Input.GetKey(KeyCode.Q))
+        {
+            isCalling = true;
+        }
+
         if (kitten != null)
         {
             AIController ac = kitten.gameObject.GetComponent<AIController>();
@@ -64,6 +72,7 @@ public class CatController : MonoBehaviour
                 //c# nullable syntax same thing as checking if (kitten != null) kitten.comfort
                 ac?.Comfort();
             }
+
             else if (Input.GetMouseButtonDown(0))
             {
                 if (ac.status != AIController.AIStatus.inMouth && !isCarrying)

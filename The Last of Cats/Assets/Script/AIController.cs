@@ -8,7 +8,7 @@ public class AIController : MonoBehaviour
 {
     public float fearDistance;
     Transform player;
-    public enum AIStatus { follow, fear, idle, inMouth };
+    public enum AIStatus { follow, fear, idle, inMouth, attracted };
     public AIStatus status;
     public float speed;
     public float rotateSpeed;
@@ -24,6 +24,8 @@ public class AIController : MonoBehaviour
     [FMODUnity.EventRef]
     public string fearSoundPath;
     FMOD.Studio.EventInstance fearSound;
+
+    public Vector3 targetPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -60,47 +62,7 @@ public class AIController : MonoBehaviour
                 break;
             case AIStatus.follow:
                 {
-                    if((player.position - transform.position).magnitude > 0.8f)
-                    {
-                        anim.SetBool("isWalk", true);
-                        var targetDirection = player.position - transform.position;
-                        targetDirection.y = 0;
-                        targetDirection = targetDirection.normalized;
-                        var deltaAngle = Vector3.SignedAngle(new Vector3(targetDirection.x, 0, targetDirection.z), transform.forward, -Vector3.up);
-                        if (deltaAngle > 5)
-                        {
-                            transform.Rotate(Vector3.up, Time.deltaTime * rotateSpeed);
-                        }
-                        else if (deltaAngle < -5)
-                        {
-                            transform.Rotate(Vector3.up, Time.deltaTime * -rotateSpeed);
-                        }
-                        else
-                        {
-                            transform.forward = targetDirection;
-                        }
-                        rb.velocity = transform.forward * speed;
-                        transform.forward = rb.velocity.normalized;
-                        var vel = rb.velocity;
-                        vel.y = -1;
-                        rb.velocity = vel;
-                    }
-                    else
-                    {
-                        anim.SetBool("isWalk", false);
-                        rb.velocity = new Vector3(0, -1, 0);
-                    }
-                    //fear when too far from player
-                    if ((player.position - transform.position).magnitude > fearDistance)
-                    {
-                        fear += 1 * Time.deltaTime;
-                    }
-                    if (fear >= 1)
-                    {
-                        anim.SetBool("isWalk", false);
-                        rb.velocity = new Vector3(0, -1, 0);
-                        setStatus(AIStatus.fear);
-                    }
+                    moveTo(player.position);
                 }
                 break;
             case AIStatus.idle:
@@ -135,6 +97,58 @@ public class AIController : MonoBehaviour
                     rb.velocity = Vector3.zero;
                 }
                 break;
+            case AIStatus.attracted:
+                {
+                    moveTo(targetPosition);
+                }
+                break;
+        }
+    }
+
+    void moveTo(Vector3 targetPosition) 
+    {
+        if ((targetPosition - transform.position).magnitude > 0.8f)
+        {
+            anim.SetBool("isWalk", true);
+            var targetDirection = targetPosition - transform.position;
+            targetDirection.y = 0;
+            targetDirection = targetDirection.normalized;
+            var deltaAngle = Vector3.SignedAngle(new Vector3(targetDirection.x, 0, targetDirection.z), transform.forward, -Vector3.up);
+            if (deltaAngle > 5)
+            {
+                transform.Rotate(Vector3.up, Time.deltaTime * rotateSpeed);
+            }
+            else if (deltaAngle < -5)
+            {
+                transform.Rotate(Vector3.up, Time.deltaTime * -rotateSpeed);
+            }
+            else
+            {
+                transform.forward = targetDirection;
+            }
+            rb.velocity = transform.forward * speed;
+            transform.forward = rb.velocity.normalized;
+            var vel = rb.velocity;
+            vel.y = -1;
+            rb.velocity = vel;
+
+        }
+        else
+        {
+            anim.SetBool("isWalk", false);
+            rb.velocity = new Vector3(0, -1, 0);
+        }
+
+        //fear when too far from player
+        if ((player.position - transform.position).magnitude > fearDistance)
+        {
+            fear += 1 * Time.deltaTime;
+        }
+        if (fear >= 1)
+        {
+            anim.SetBool("isWalk", false);
+            rb.velocity = new Vector3(0, -1, 0);
+            setStatus(AIStatus.fear);
         }
     }
 
@@ -154,5 +168,14 @@ public class AIController : MonoBehaviour
     {
         this.status = status;
         if (status == AIStatus.fear) { fearSound.start(); }
+    }
+
+    public void setStatus(AIStatus status, Vector3 position) 
+    {
+        this.status = status;
+        if (status == AIStatus.attracted) 
+        {
+            targetPosition = position;
+        }
     }
 }

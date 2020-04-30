@@ -41,9 +41,10 @@ public class GameManager : MonoBehaviour
         foreach (var i in kittens)
         {
             // Follow mother
-            if (Input.GetMouseButtonDown(0) && !player.GetComponent<CatController>().isCarrying && i.GetComponent<AIController>().status != AIController.AIStatus.fear)
+            //if (Input.GetMouseButtonDown(0) && !player.GetComponent<CatController>().isCarrying && i.GetComponent<AIController>().status != AIController.AIStatus.fear)
+            if (i.GetComponent<AIController>().status == AIController.AIStatus.idle)
             {
-                i.GetComponent<AIController>().status = AIController.AIStatus.follow;
+                i.GetComponent<AIController>().setStatus(AIController.AIStatus.follow);
             }
 
             // To record the max fear value
@@ -52,11 +53,19 @@ public class GameManager : MonoBehaviour
                 fear = i.GetComponent<AIController>().fear;
                 dir = i.transform.position - player.transform.position;
             }
+
+            // To call kitten back
+            if (i.GetComponent<AIController>().status == AIController.AIStatus.attracted && player.GetComponent<CatController>().isCalling)
+            {
+                i.GetComponent<AIController>().setStatus(AIController.AIStatus.follow);
+            }
         }
 
         // if any kitten is fear and the mother move opposite, slow the mother
         if (Cross(dir, player.transform.forward) <= 0.0f) player.GetComponent<CatController>().speed = player.GetComponent<CatController>().speedMax * (1.0f - 0.7f * fear);
         else player.GetComponent<CatController>().speed = player.GetComponent<CatController>().speedMax;
+
+        player.GetComponent<CatController>().isCalling = false;
     }
 
     float Cross(Vector3 v1, Vector3 v2) 
