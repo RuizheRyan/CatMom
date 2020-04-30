@@ -57,6 +57,7 @@ public class AIController : MonoBehaviour
                     if (fear <= 0)
                     {
                         status = AIStatus.idle;
+                        anim.SetBool("isFear", false);
                     }
                 }
                 break;
@@ -68,7 +69,6 @@ public class AIController : MonoBehaviour
             case AIStatus.idle:
                 {
                     anim.SetBool("inMouth", false);
-                    anim.SetBool("isFear", false);
                     var vel = rb.velocity;
                     vel.y = -1;
                     rb.velocity = vel;
