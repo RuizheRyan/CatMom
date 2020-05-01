@@ -14,6 +14,7 @@ public class AIController : MonoBehaviour
     public float rotateSpeed;
 
     [Range(0, 1)] public float fear;
+    [SerializeField] private float feartime = 3.0f;
     [SerializeField] private float fearChangeRate;
 
     public Animator anim;
@@ -82,7 +83,7 @@ public class AIController : MonoBehaviour
                     //fear when too far from player
                     if ((player.position - transform.position).magnitude > fearDistance)
                     {
-                        fear += 1 * Time.deltaTime;
+                        fear += 1 * Time.deltaTime / feartime;
                     }
                     if (fear >= 1)
                     {
@@ -145,7 +146,7 @@ public class AIController : MonoBehaviour
         //fear when too far from player
         if ((player.position - transform.position).magnitude > fearDistance)
         {
-            fear += 1 * Time.deltaTime;
+            fear += 1 * Time.deltaTime / feartime;
         }
         if (fear >= 1)
         {
