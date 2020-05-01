@@ -85,7 +85,7 @@ public class CatController : MonoBehaviour
     private void Update()
     {
         // To call kitten back
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q) && !isCarrying)
         {
             isCalling = true;
         }
