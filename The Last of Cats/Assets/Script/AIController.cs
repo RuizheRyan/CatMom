@@ -151,6 +151,7 @@ public class AIController : MonoBehaviour
         {
             anim.SetBool("isWalk", false);
             rb.velocity = new Vector3(0, -1, 0);
+            anim.SetFloat("Attracted", status == AIStatus.attracted ? 1 : 0);
         }
 
         //fear when too far from player

@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
         transform.position = player.position + Vector3.up * 0.25f;
         Ray ray = new Ray(transform.position, -transform.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 3, ~(1 << 8)))
+        if (Physics.Raycast(ray, out hit, 3, ~(1 << 8 | 1 << 2)))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.red);
             Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Min(0.1f, 0.1f - hit.distance));
