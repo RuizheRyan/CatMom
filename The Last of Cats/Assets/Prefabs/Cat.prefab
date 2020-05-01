@@ -1814,6 +1814,7 @@ MonoBehaviour:
   fallingSpeed: 0
   mouth: {fileID: 1290452747}
   callBackSoundPath: event:/CallBack
+  purrSoundPath: event:/Purr
 --- !u!143 &955726524225733927
 CharacterController:
   m_ObjectHideFlags: 0
