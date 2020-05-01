@@ -528,7 +528,11 @@ MonoBehaviour:
   anim: {fileID: 4854739560529103932}
   comfortVFX: {fileID: 7344426314515461066}
   fearSoundPath: event:/Fear
+<<<<<<< Updated upstream
   purrSoundPath: event:/Purr
+=======
+  comfortSoundPath: event:/Meow
+>>>>>>> Stashed changes
   targetPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2044250005768083824
 GameObject:
