@@ -93,10 +93,10 @@
 			<value>0.080000000000000002</value>
 		</property>
 		<property name="length">
-			<value>1.2</value>
+			<value>1.3200000000000001</value>
 		</property>
 		<property name="pitch">
-			<value>3.20000005</value>
+			<value>0.600000024</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{3181d6b9-4523-46dd-969b-239818e5da85}</destination>
@@ -110,7 +110,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{6cb12bf5-6f3b-465a-ad71-f9170d52fb46}">
 		<property name="volume">
-			<value>-24.5</value>
+			<value>-32</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -176,7 +176,7 @@
 	</object>
 	<object class="AutomationPoint" id="{44f8e295-c2b9-4fe8-8a0e-9f53de90e52f}">
 		<property name="position">
-			<value>1.1800000000000002</value>
+			<value>1.3000000000000003</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -187,7 +187,7 @@
 	</object>
 	<object class="AutomationPoint" id="{3ca45034-4e84-4c61-a04d-c383e21b9022}">
 		<property name="position">
-			<value>1.28</value>
+			<value>1.4000000000000001</value>
 		</property>
 		<property name="value">
 			<value>0</value>

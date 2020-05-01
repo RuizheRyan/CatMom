@@ -1,300 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8820619444406164285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-8791478830724596326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &-8550610642305978874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238962913033918
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-8250305365023903135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &-8192954133466261493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238936970963706
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-8179394665356175026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238936970963706
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-8035120341619063057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-7978990942627192822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-7774246035087825204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238927036584075
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-7507557085604259468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238893913914073
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-7338670143500257612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-7196486548861646658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637236973388469365
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
-<<<<<<< HEAD
---- !u!114 &-7061320028485779997
-=======
---- !u!114 &-6662148415361179218
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-<<<<<<< HEAD
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
-=======
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
---- !u!114 &-6659439741154302777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238889035004499
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-6493644716355648770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-6281653863443708379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238969419814406
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-5862236077659158702
+--- !u!114 &-8443615287498068312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,108 +15,15 @@ MonoBehaviour:
   Path: event:/Purr
   guid: 8598043857ae804692022f0cb22ff8e1
   Banks:
-<<<<<<< HEAD
-  - {fileID: -4780026795449496942}
-  IsStream: 0
-=======
-  - {fileID: 7613552734311400278}
+  - {fileID: 5708799197026412732}
   IsStream: 1
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
   Length: 8800
---- !u!114 &-5836238980073315065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238937733406817
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-5832632104585052029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637237344890000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5568423807442476189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &-5324650784240163122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-5261251526478709840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Homework/Game 270-255/Project 2/LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637236973388469365
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5225936144398034749
+--- !u!114 &-7825256811455610133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -427,7 +40,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &-5130146434622076944
+--- !u!114 &-7662475271628499948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,16 +49,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Pitch
   m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238911026899373
-  LoadResult: 0
-  FileSizes: []
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
   Exists: 0
---- !u!114 &-4934530740543751081
+--- !u!114 &-6635538009867947215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear 2/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6463650581857284733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -455,227 +84,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fear 2
+  m_Name: event:/Fear
   m_EditorClassIdentifier: 
-  Path: event:/Fear 2
-  guid: e1c722b56a580745acb48aa90de22149
+  Path: event:/Fear
+  guid: 58d79b61cd8e3046bb1eb04da8ec190d
   Banks:
-<<<<<<< HEAD
-  - {fileID: -4780026795449496942}
-=======
-  - {fileID: 7613552734311400278}
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
+  - {fileID: 5708799197026412732}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-<<<<<<< HEAD
-  - {fileID: -4556612549046176444}
-  - {fileID: -7061320028485779997}
+  - {fileID: -6381135292916368779}
+  - {fileID: 1761994337598182154}
   MinDistance: 0
   MaxDistance: 0
-  Length: 1660
---- !u!114 &-4780026795449496942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238937733406817
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
-=======
-  - {fileID: 5098753507331531093}
-  - {fileID: 2659656380418200179}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1600
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
---- !u!114 &-4723031713521784190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Homework/Game 270-255/Project 2/LOC/Build/Desktop/Cat.strings.bank
-  SubDir: 
-  lastModified: 637236972964500678
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 776
-  Exists: 1
---- !u!114 &-4562177532348547390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-4556612549046176444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-4422496767380810919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637236973388469365
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-4217919562700095002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-3339299835147618742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-3117401542504388304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-2988419175457755595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-2937555643854936523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-2798396087948905777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238903240906739
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-2619094269247143774
+  Length: 1200
+--- !u!114 &-6381135292916368779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -686,171 +110,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-2574171246136933332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238900342691243
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-2573004789996381888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &-2543423554626025906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-2514192959352190106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Homework/Game 270-255/Project 2/LOC/Build/Desktop/Cat.strings.bank
-  SubDir: 
-  lastModified: 637236973388489650
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 776
-  Exists: 1
---- !u!114 &-2384124248501055326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-2075576302939071042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637237158347225736
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-1584277556691365577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-1456798571994645309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-1255272810944304273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
   m_EditorClassIdentifier: 
   Name: Pitch
   Min: 0
   Max: 2
   Default: 0
   Exists: 1
---- !u!114 &-910067654352469851
+--- !u!114 &-6352795099768454570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-6089312175220069886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -865,11 +148,7 @@ MonoBehaviour:
   Path: event:/CallBack
   guid: 9b6cdec18acfed49acc0b233364668aa
   Banks:
-<<<<<<< HEAD
-  - {fileID: -4780026795449496942}
-=======
-  - {fileID: 7613552734311400278}
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
+  - {fileID: 5708799197026412732}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -877,7 +156,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1050
---- !u!114 &-814101247327469367
+--- !u!114 &-5463414455532295198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -887,14 +166,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
+  m_Name: parameter:/Fear 2/Pitch
   m_EditorClassIdentifier: 
   Name: Pitch
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
---- !u!114 &-567053552402563885
+  Exists: 0
+--- !u!114 &-4632592091489549097
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -911,7 +190,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &-280039544856591004
+--- !u!114 &-4213187651240238794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -920,25 +199,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Reply1
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear 2/Distance
   m_EditorClassIdentifier: 
-  Path: event:/Reply1
-  guid: b8ca8b1efbb8b5418e1ec7719342de5e
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -4780026795449496942}
-=======
-  - {fileID: 7613552734311400278}
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1250
---- !u!114 &-136019014796418982
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-3070275803417912375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -954,8 +223,8 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
---- !u!114 &-98221928526801326
+  Exists: 0
+--- !u!114 &-1862764075219363529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -964,15 +233,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.strings.bank
   m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-32819651228775616
+  Path: ../LOC/Build/Desktop/Cat.strings.bank
+  SubDir: 
+  lastModified: 637239023811331946
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
+--- !u!114 &-101454927715287132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1002,126 +274,23 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1079605397654594633}
-<<<<<<< HEAD
-  - {fileID: -4780026795449496942}
-=======
-  - {fileID: 7613552734311400278}
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
+  - {fileID: -1862764075219363529}
+  - {fileID: 5708799197026412732}
   EditorEvents:
-  - {fileID: 6371331451018001897}
-  - {fileID: -5862236077659158702}
-  - {fileID: -910067654352469851}
-  - {fileID: -4934530740543751081}
-  - {fileID: 1541727951907265767}
-  - {fileID: -280039544856591004}
+  - {fileID: -6463650581857284733}
+  - {fileID: -8443615287498068312}
+  - {fileID: 1767340537431439974}
+  - {fileID: -6089312175220069886}
+  - {fileID: 2870959005334838436}
+  - {fileID: 2241179849509648441}
   EditorParameters: []
   MasterBanks:
-<<<<<<< HEAD
-  - {fileID: -4780026795449496942}
+  - {fileID: 5708799197026412732}
   StringsBanks:
-  - {fileID: 1079605397654594633}
-  stringsBankWriteTime: 637238937733436759
-=======
-  - {fileID: 7613552734311400278}
-  StringsBanks:
-  - {fileID: 1079605397654594633}
-  stringsBankWriteTime: 637238969849409981
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
+  - {fileID: -1862764075219363529}
+  stringsBankWriteTime: 637239023811331946
   cacheVersion: 3
---- !u!114 &91137532928837940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &273268154066087925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &324520561342761502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &1079605397654594633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.strings.bank
-  SubDir: 
-<<<<<<< HEAD
-  lastModified: 637238937733436759
-=======
-  lastModified: 637238969849409981
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1
---- !u!114 &1314332070658261020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &1536558074845361645
+--- !u!114 &1761994337598182154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1138,7 +307,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &1541727951907265767
+--- !u!114 &1767340537431439974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1153,122 +322,15 @@ MonoBehaviour:
   Path: event:/Reply2
   guid: 8d8bbf9a3211594aa1c361dd8838b2f8
   Banks:
-<<<<<<< HEAD
-  - {fileID: -4780026795449496942}
-=======
-  - {fileID: 7613552734311400278}
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
+  - {fileID: 5708799197026412732}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1280
---- !u!114 &1790732773924230878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &2061551716345282774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &2209590654760229974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &2659656380418200179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
---- !u!114 &2860065374541322877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238911576431555
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &2869745216613464842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &2883963848622129102
+  Length: 1400
+--- !u!114 &2241179849509648441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1278,278 +340,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fear
+  m_Name: event:/Fear 2
   m_EditorClassIdentifier: 
-  Path: event:/Fear
-  guid: 58d79b61cd8e3046bb1eb04da8ec190d
+  Path: event:/Fear 2
+  guid: e1c722b56a580745acb48aa90de22149
   Banks:
-  - {fileID: -5261251526478709840}
+  - {fileID: 5708799197026412732}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3339299835147618742}
+  - {fileID: -6635538009867947215}
+  - {fileID: 8504830292619916146}
   MinDistance: 0
   MaxDistance: 0
-  Length: 3500
---- !u!114 &3100958944122496725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &3348496752828123015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &3439067949511170245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &3762039862462173459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &3770015234293341219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4207770374698804806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4312063702403098005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4472310735375948932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4518585394048300462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4528565073521157607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238822555102032
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &5068827280424362244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &5098753507331531093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &5120351284704905099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238813737333933
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &5306208048483433089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &5608989826553554657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &5945008328641599830
+  Length: 1600
+--- !u!114 &2870959005334838436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1559,297 +365,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fear
+  m_Name: event:/Reply1
   m_EditorClassIdentifier: 
-  Path: event:/Fear
-  guid: 58d79b61cd8e3046bb1eb04da8ec190d
+  Path: event:/Reply1
+  guid: b8ca8b1efbb8b5418e1ec7719342de5e
   Banks:
-  - {fileID: 7491263658889816400}
+  - {fileID: 5708799197026412732}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -8035120341619063057}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 3500
---- !u!114 &6113370047340163958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &6174816288480273656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &6261466938908754083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &6296936066363916964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &6371331451018001897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fear
-  m_EditorClassIdentifier: 
-  Path: event:/Fear
-  guid: 58d79b61cd8e3046bb1eb04da8ec190d
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -4780026795449496942}
-=======
-  - {fileID: 7613552734311400278}
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-<<<<<<< HEAD
-  - {fileID: 7913068213671417866}
-  - {fileID: 8083443613895686572}
-=======
-  - {fileID: -814101247327469367}
-  - {fileID: -136019014796418982}
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1200
---- !u!114 &6486000682005038190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
---- !u!114 &6525683902155492040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &6668970881750060318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238902699864907
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &6866196843567457603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &6869387146507221171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238968658080499
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &6879316232474456959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &7123541224206506975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637238946343726577
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &7154477747707506940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &7315888133354624821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &7491263658889816400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Homework/Game 270-255/Project 2/LOC/Build/Desktop/Cat.bank
-  SubDir: 
-  lastModified: 637236972964480246
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &7613552734311400278
+  Length: 1250
+--- !u!114 &3455244835162051204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1866,8 +395,26 @@ MonoBehaviour:
   lastModified: 637238969849320218
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &5708799197026412732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.bank
+  m_EditorClassIdentifier: 
+  Path: ../LOC/Build/Desktop/Cat.bank
+  SubDir: 
+  lastModified: 637239023811242186
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
---- !u!114 &7817033157727419248
+--- !u!114 &7345018577745637329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1876,104 +423,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.bank
   m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
+  Path: ../LOC/Build/Desktop/Cat.bank
+  SubDir: 
+  lastModified: 637239022716506255
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
-<<<<<<< HEAD
---- !u!114 &7913068213671417866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
---- !u!114 &8083443613895686572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &8542205594318475348
-=======
---- !u!114 &7861959425923278784
->>>>>>> ada1675280cd1baa567cc1e984519b350560d18d
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear 2/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &8688943672101867366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &9038235686598048578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
-  m_EditorClassIdentifier: 
-  Name: Distance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &9174239413523960101
+--- !u!114 &8504830292619916146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1987,6 +446,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pitch
   Min: 0
-  Max: 1
+  Max: 2
   Default: 0
-  Exists: 0
+  Exists: 1
