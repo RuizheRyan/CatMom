@@ -172,10 +172,10 @@ public class AIController : MonoBehaviour
         if (fear > 0)
         {
             fear = Mathf.Max(0, fear - (fearChangeRate * Time.deltaTime));
-            if (!comfortVFX.isPlaying)
-            {
-                comfortVFX.Play();
-            }
+            //if (!comfortVFX.isPlaying)
+            //{
+            //    comfortVFX.Play();
+            //}
 
             FMOD.Studio.PLAYBACK_STATE playState = FMOD.Studio.PLAYBACK_STATE.STOPPED;
             purrSound.getPlaybackState(out playState);
