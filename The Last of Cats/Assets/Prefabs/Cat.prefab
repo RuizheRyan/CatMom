@@ -1817,13 +1817,17 @@ MonoBehaviour:
   cameraController: {fileID: 0}
   speedMax: 3
   speed: 3
-  jumpSpeedMax: 2.8
+  runSpeed: 0
   jumpSpeed: 2.8
   gravity: 10
   rotateSpeed: 400
+  runRotateSpeed: 0
   tip: {fileID: 6690516732625342740, guid: 184333f5118613d45b55bb46f6d73b2b, type: 3}
   isCarrying: 0
+  isCalling: 0
+  fallingSpeed: 0
   mouth: {fileID: 1290452747}
+  callBackSoundPath: event:/CallBack
 --- !u!143 &955726524225733927
 CharacterController:
   m_ObjectHideFlags: 0

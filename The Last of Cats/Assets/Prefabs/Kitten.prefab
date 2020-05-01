@@ -523,10 +523,13 @@ MonoBehaviour:
   speed: 3
   rotateSpeed: 350
   fear: 0
+  feartime: 3
   fearChangeRate: 0.5
   anim: {fileID: 4854739560529103932}
   comfortVFX: {fileID: 7344426314515461066}
   fearSoundPath: event:/Fear
+  purrSoundPath: event:/Purr
+  targetPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2044250005768083824
 GameObject:
   m_ObjectHideFlags: 0

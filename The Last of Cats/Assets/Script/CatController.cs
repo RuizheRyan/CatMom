@@ -27,6 +27,12 @@ public class CatController : MonoBehaviour
     private GameObject kitten;
     private bool isGrounded;
     private Rigidbody rb;
+
+    [FMODUnity.EventRef]
+    public string callBackSoundPath;
+    FMOD.Studio.EventInstance callBackSound;
+    FMOD.Studio.PLAYBACK_STATE playState = FMOD.Studio.PLAYBACK_STATE.STOPPED;
+
     void Start()
     {
         mouth = mouth == null ? GameObject.Find("MouthPos").transform : mouth;
@@ -39,6 +45,9 @@ public class CatController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         runSpeed = runSpeed == 0 ? speed * 2 : runSpeed;
         runRotateSpeed = runRotateSpeed == 0 ? rotateSpeed / 2 : runRotateSpeed;
+
+        // Instantiate the call back sound
+        callBackSound = FMODUnity.RuntimeManager.CreateInstance(callBackSoundPath);
     }
 
     void FixedUpdate()
@@ -87,6 +96,9 @@ public class CatController : MonoBehaviour
         // To call kitten back
         if (Input.GetKey(KeyCode.Q))
         {
+            callBackSound.getPlaybackState(out playState);
+            if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING) callBackSound.start();
+
             isCalling = true;
             if(kitten) putDown(kitten);
         }

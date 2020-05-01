@@ -26,6 +26,11 @@ public class AIController : MonoBehaviour
     public string fearSoundPath;
     FMOD.Studio.EventInstance fearSound;
 
+    // The purr sound
+    [FMODUnity.EventRef]
+    public string purrSoundPath;
+    FMOD.Studio.EventInstance purrSound;
+
     public Vector3 targetPosition;
     
     Material material;
@@ -42,15 +47,17 @@ public class AIController : MonoBehaviour
 
         // Instantiate the fear sound
         fearSound = FMODUnity.RuntimeManager.CreateInstance(fearSoundPath);
+        fearSound.setParameterByName("Pitch", Random.value);
+
+        // Instantiate the purr sound
+        purrSound = FMODUnity.RuntimeManager.CreateInstance(purrSoundPath);
+
         material =  GetComponentInChildren<Renderer>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Change the volume of the sound
-        fearSound.setParameterByName("Distance", fear);
-
         switch (status)
         {
             case AIStatus.fear:
@@ -63,6 +70,9 @@ public class AIController : MonoBehaviour
                         status = AIStatus.idle;
                         anim.SetBool("isFear", false);
                     }
+
+                    // Change the volume of the sound
+                    fearSound.setParameterByName("Distance", fear);
                 }
                 break;
             case AIStatus.follow:
@@ -165,13 +175,20 @@ public class AIController : MonoBehaviour
             {
                 comfortVFX.Play();
             }
+
+            FMOD.Studio.PLAYBACK_STATE playState = FMOD.Studio.PLAYBACK_STATE.STOPPED;
+            purrSound.getPlaybackState(out playState);
+            if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING) purrSound.start();
         }
     }
 
     public void setStatus(AIStatus status) 
     {
         this.status = status;
-        if (status == AIStatus.fear) { fearSound.start(); }
+
+        // play fear sound
+        if (status == AIStatus.fear) fearSound.start();
+        else fearSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void setStatus(AIStatus status, Vector3 position) 
