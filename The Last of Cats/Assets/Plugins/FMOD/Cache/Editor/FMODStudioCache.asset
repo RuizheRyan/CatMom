@@ -159,6 +159,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-6105477018247672085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.bank
+  m_EditorClassIdentifier: 
+  Path: ../LOC/Build/Desktop/Cat.bank
+  SubDir: 
+  lastModified: 637238955190370368
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5862236077659158702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +192,7 @@ MonoBehaviour:
   Path: event:/Purr
   guid: 8598043857ae804692022f0cb22ff8e1
   Banks:
-  - {fileID: -5836238980073315065}
+  - {fileID: -6105477018247672085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -199,7 +217,7 @@ MonoBehaviour:
   lastModified: 637238937733406817
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5832632104585052029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,13 +304,13 @@ MonoBehaviour:
   Path: event:/Fear 2
   guid: e1c722b56a580745acb48aa90de22149
   Banks:
-  - {fileID: -5836238980073315065}
+  - {fileID: -6105477018247672085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3439067949511170245}
-  - {fileID: -2573004789996381888}
+  - {fileID: 8542205594318475348}
+  - {fileID: -1255272810944304273}
   MinDistance: 0
   MaxDistance: 0
   Length: 1660
@@ -488,7 +506,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2543423554626025906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +613,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-1255272810944304273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear 2/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-910067654352469851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,7 +645,7 @@ MonoBehaviour:
   Path: event:/CallBack
   guid: 9b6cdec18acfed49acc0b233364668aa
   Banks:
-  - {fileID: -5836238980073315065}
+  - {fileID: -6105477018247672085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -650,7 +685,7 @@ MonoBehaviour:
   Path: event:/Reply1
   guid: b8ca8b1efbb8b5418e1ec7719342de5e
   Banks:
-  - {fileID: -5836238980073315065}
+  - {fileID: -6105477018247672085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -689,7 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 1079605397654594633}
-  - {fileID: -5836238980073315065}
+  - {fileID: -6105477018247672085}
   EditorEvents:
   - {fileID: 6371331451018001897}
   - {fileID: -5862236077659158702}
@@ -699,10 +734,10 @@ MonoBehaviour:
   - {fileID: -280039544856591004}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5836238980073315065}
+  - {fileID: -6105477018247672085}
   StringsBanks:
   - {fileID: 1079605397654594633}
-  stringsBankWriteTime: 637238937733436759
+  stringsBankWriteTime: 637238955190370368
   cacheVersion: 3
 --- !u!114 &273268154066087925
 MonoBehaviour:
@@ -752,7 +787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../LOC/Build/Desktop/Cat.strings.bank
   SubDir: 
-  lastModified: 637238937733436759
+  lastModified: 637238955190370368
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -807,7 +842,7 @@ MonoBehaviour:
   Path: event:/Reply2
   guid: 8d8bbf9a3211594aa1c361dd8838b2f8
   Banks:
-  - {fileID: -5836238980073315065}
+  - {fileID: -6105477018247672085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -941,7 +976,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3762039862462173459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,7 +1027,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4312063702403098005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,16 +1256,50 @@ MonoBehaviour:
   Path: event:/Fear
   guid: 58d79b61cd8e3046bb1eb04da8ec190d
   Banks:
-  - {fileID: -5836238980073315065}
+  - {fileID: -6105477018247672085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7817033157727419248}
-  - {fileID: 4207770374698804806}
+  - {fileID: 6486000682005038190}
+  - {fileID: 6525683902155492040}
   MinDistance: 0
   MaxDistance: 0
   Length: 1200
+--- !u!114 &6486000682005038190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &6525683902155492040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &6668970881750060318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,6 +1385,23 @@ MonoBehaviour:
   Name: Pitch
   Min: 0
   Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &8542205594318475348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear 2/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
   Default: 0
   Exists: 1
 --- !u!114 &8688943672101867366
