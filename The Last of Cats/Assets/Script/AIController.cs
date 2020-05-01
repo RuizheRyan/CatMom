@@ -67,7 +67,7 @@ public class AIController : MonoBehaviour
                     rb.velocity = new Vector3(0, -1, 0);
                     if (fear <= 0)
                     {
-                        status = AIStatus.idle;
+                        setStatus(AIStatus.idle);
                         anim.SetBool("isFear", false);
                     }
 
@@ -177,20 +177,24 @@ public class AIController : MonoBehaviour
             //    comfortVFX.Play();
             //}
 
-            FMOD.Studio.PLAYBACK_STATE playState = FMOD.Studio.PLAYBACK_STATE.STOPPED;
-            purrSound.getPlaybackState(out playState);
-            if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING) purrSound.start();
+            //FMOD.Studio.PLAYBACK_STATE playState = FMOD.Studio.PLAYBACK_STATE.STOPPED;
+            //purrSound.getPlaybackState(out playState);
+            //if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING) purrSound.start();
         }
     }
 
-    public void setStatus(AIStatus status) 
+    public void setStatus(AIStatus status)
     {
         this.status = status;
 
         // play fear sound
         if (status == AIStatus.fear) fearSound.start();
-        else fearSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        else
+        {
+            fearSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
     }
+
 
     public void setStatus(AIStatus status, Vector3 position) 
     {

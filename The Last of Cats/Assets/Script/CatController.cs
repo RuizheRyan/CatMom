@@ -32,6 +32,10 @@ public class CatController : MonoBehaviour
     public string callBackSoundPath;
     FMOD.Studio.EventInstance callBackSound;
     FMOD.Studio.PLAYBACK_STATE playState = FMOD.Studio.PLAYBACK_STATE.STOPPED;
+    // The purr sound
+    [FMODUnity.EventRef]
+    public string purrSoundPath;
+    FMOD.Studio.EventInstance purrSound;
 
     void Start()
     {
@@ -48,6 +52,8 @@ public class CatController : MonoBehaviour
 
         // Instantiate the call back sound
         callBackSound = FMODUnity.RuntimeManager.CreateInstance(callBackSoundPath);
+        // Instantiate the purr sound
+        purrSound = FMODUnity.RuntimeManager.CreateInstance(purrSoundPath);
     }
 
     void FixedUpdate()
@@ -110,8 +116,10 @@ public class CatController : MonoBehaviour
             {
                 //c# nullable syntax same thing as checking if (kitten != null) kitten.comfort
                 ac?.Comfort();
+                FMOD.Studio.PLAYBACK_STATE playState = FMOD.Studio.PLAYBACK_STATE.STOPPED;
+                purrSound.getPlaybackState(out playState);
+                if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING) purrSound.start();
             }
-
             else if (Input.GetMouseButtonDown(0))
             {
                 if (ac.status != AIController.AIStatus.inMouth && !isCarrying)
@@ -129,6 +137,10 @@ public class CatController : MonoBehaviour
                 {
                     putDown(kitten);
                 }
+            }
+            else
+            {
+                purrSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
 
