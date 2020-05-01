@@ -88,6 +88,7 @@ public class CatController : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
         {
             isCalling = true;
+            if(kitten) putDown(kitten);
         }
 
         if (kitten != null)
@@ -114,25 +115,7 @@ public class CatController : MonoBehaviour
                 }
                 else
                 {
-                    isCarrying = false;
-                    if (ac.fear >= 1)
-                    {
-                        ac.status = AIController.AIStatus.fear;
-                        ac.anim.SetBool("isFear", true);
-                        ac.anim.SetBool("inMouth", false);
-                    }
-                    else
-                    {
-                        ac.status = AIController.AIStatus.idle;
-                        ac.anim.SetBool("inMouth", false);
-                        ac.anim.SetBool("isFear", false);
-                    }
-                    //ac.status = ac.fear >= 1 ? AIController.AIStatus.fear : AIController.AIStatus.idle;
-                    var kittenTrans = kitten.transform;
-                    kittenTrans.SetParent(null);
-                    kittenTrans.rotation = Quaternion.identity;
-                    kitten.GetComponent<Rigidbody>().isKinematic = false;
-                    kittenTrans.GetComponent<Collider>().enabled = true;
+                    putDown(kitten);
                 }
             }
         }
@@ -228,6 +211,31 @@ public class CatController : MonoBehaviour
         //{
         //    kitten = other.gameObject;
         //}
+    }
+
+    void putDown(GameObject kitten)
+    {
+        AIController ac = kitten.gameObject.GetComponent<AIController>();
+
+        isCarrying = false;
+        if (ac.fear >= 1)
+        {
+            ac.status = AIController.AIStatus.fear;
+            ac.anim.SetBool("isFear", true);
+            ac.anim.SetBool("inMouth", false);
+        }
+        else
+        {
+            ac.status = AIController.AIStatus.idle;
+            ac.anim.SetBool("inMouth", false);
+            ac.anim.SetBool("isFear", false);
+        }
+        //ac.status = ac.fear >= 1 ? AIController.AIStatus.fear : AIController.AIStatus.idle;
+        var kittenTrans = kitten.transform;
+        kittenTrans.SetParent(null);
+        kittenTrans.rotation = Quaternion.identity;
+        kitten.GetComponent<Rigidbody>().isKinematic = false;
+        kittenTrans.GetComponent<Collider>().enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)

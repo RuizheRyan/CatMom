@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             }
 
             // To call kitten back
-            if (i.GetComponent<AIController>().status != AIController.AIStatus.follow && player.GetComponent<CatController>().isCalling)
+            if (i.GetComponent<AIController>().status != AIController.AIStatus.fear && player.GetComponent<CatController>().isCalling)
             {
                 i.GetComponent<AIController>().setStatus(AIController.AIStatus.follow);
             }
