@@ -2612,6 +2612,11 @@ PrefabInstance:
       propertyPath: fearSoundPath
       value: event:/Fear 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9106983387223475270, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
+        type: 3}
+      propertyPath: replySoundPath
+      value: event:/Reply2
+      objectReference: {fileID: 0}
     - target: {fileID: 9106983387223475271, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
         type: 3}
       propertyPath: m_UseGravity
@@ -4075,6 +4080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106983387223475270, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
+        type: 3}
+      propertyPath: replySoundPath
+      value: event:/Reply1
       objectReference: {fileID: 0}
     - target: {fileID: 9106983387223475271, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
         type: 3}
