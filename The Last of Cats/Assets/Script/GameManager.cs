@@ -40,12 +40,12 @@ public class GameManager : MonoBehaviour
         Vector3 dir = player.transform.forward;
         foreach (var i in kittens)
         {
-            // Follow mother
-            //if (Input.GetMouseButtonDown(0) && !player.GetComponent<CatController>().isCarrying && i.GetComponent<AIController>().status != AIController.AIStatus.fear)
-            if (i.GetComponent<AIController>().status == AIController.AIStatus.idle)
-            {
-                i.GetComponent<AIController>().setStatus(AIController.AIStatus.follow);
-            }
+            //// Follow mother
+            ////if (Input.GetMouseButtonDown(0) && !player.GetComponent<CatController>().isCarrying && i.GetComponent<AIController>().status != AIController.AIStatus.fear)
+            //if (i.GetComponent<AIController>().status == AIController.AIStatus.idle)
+            //{
+            //    i.GetComponent<AIController>().setStatus(AIController.AIStatus.follow);
+            //}
 
             // To record the max fear value
             if (i.GetComponent<AIController>().fear > fear)
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             }
 
             // To call kitten back
-            if (i.GetComponent<AIController>().status == AIController.AIStatus.attracted && player.GetComponent<CatController>().isCalling)
+            if (i.GetComponent<AIController>().status != AIController.AIStatus.follow && player.GetComponent<CatController>().isCalling)
             {
                 i.GetComponent<AIController>().setStatus(AIController.AIStatus.follow);
             }
