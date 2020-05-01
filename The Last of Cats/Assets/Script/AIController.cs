@@ -26,17 +26,15 @@ public class AIController : MonoBehaviour
     public string fearSoundPath;
     FMOD.Studio.EventInstance fearSound;
 
-<<<<<<< Updated upstream
     // The purr sound
     [FMODUnity.EventRef]
     public string purrSoundPath;
     FMOD.Studio.EventInstance purrSound;
-=======
+
     // The comfort sound
     [FMODUnity.EventRef]
     public string comfortSoundPath;
     FMOD.Studio.EventInstance comfortSound;
->>>>>>> Stashed changes
 
     public Vector3 targetPosition;
     
@@ -54,15 +52,12 @@ public class AIController : MonoBehaviour
 
         // Instantiate the fear sound
         fearSound = FMODUnity.RuntimeManager.CreateInstance(fearSoundPath);
-<<<<<<< Updated upstream
         fearSound.setParameterByName("Pitch", Random.value);
 
         // Instantiate the purr sound
         purrSound = FMODUnity.RuntimeManager.CreateInstance(purrSoundPath);
-
-=======
         comfortSound = FMODUnity.RuntimeManager.CreateInstance(comfortSoundPath);
->>>>>>> Stashed changes
+
         material =  GetComponentInChildren<Renderer>().material;
     }
 
@@ -200,17 +195,11 @@ public class AIController : MonoBehaviour
     public void setStatus(AIStatus status) 
     {
         this.status = status;
-<<<<<<< Updated upstream
 
         // play fear sound
         if (status == AIStatus.fear) fearSound.start();
         else fearSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-=======
-        if (status == AIStatus.fear) {
-            comfortSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            fearSound.start();
-        }
->>>>>>> Stashed changes
+
     }
 
     public void setStatus(AIStatus status, Vector3 position) 
