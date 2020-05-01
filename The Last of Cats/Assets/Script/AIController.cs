@@ -31,9 +31,16 @@ public class AIController : MonoBehaviour
     public string purrSoundPath;
     FMOD.Studio.EventInstance purrSound;
 
+    // The reply sound
+    [FMODUnity.EventRef]
+    public string replySoundPath;
+
     public Vector3 targetPosition;
     
     Material material;
+
+    bool delay = false;
+    float delayTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +84,13 @@ public class AIController : MonoBehaviour
                 break;
             case AIStatus.follow:
                 {
+                    // reply
+                    if (delayTime > 0) delayTime -= Time.deltaTime;
+                    else if (delay)
+                    {
+                        delay = false;
+                        FMODUnity.RuntimeManager.PlayOneShot(replySoundPath);
+                    }
                     moveTo(player.position);
                 }
                 break;
@@ -189,9 +203,13 @@ public class AIController : MonoBehaviour
 
         // play fear sound
         if (status == AIStatus.fear) fearSound.start();
-        else
+        else fearSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+        // Set delay reply
+        if (status == AIStatus.follow)
         {
-            fearSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            delayTime = 0.6f;
+            delay = true;
         }
     }
 
