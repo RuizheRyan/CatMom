@@ -375,7 +375,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-32</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.332974494</value>
@@ -386,7 +386,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-16</value>
+			<value>-27</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{4f2341ed-ddbc-4efb-a6c7-87283d8a73ef}">

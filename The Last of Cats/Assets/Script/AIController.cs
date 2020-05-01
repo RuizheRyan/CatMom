@@ -42,9 +42,14 @@ public class AIController : MonoBehaviour
     bool delay = false;
     float delayTime = 0;
 
+    public GameObject scaredTip;
+    public GameObject ctrlTip;
+
     // Start is called before the first frame update
     void Start()
     {
+        scaredTip.SetActive(false);
+        ctrlTip.SetActive(false);
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         if(anim == null)
@@ -65,6 +70,7 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        scaredTip.SetActive(status == AIStatus.fear ? true : false);
         switch (status)
         {
             case AIStatus.fear:
@@ -119,6 +125,7 @@ public class AIController : MonoBehaviour
                 break;
             case AIStatus.inMouth:
                 {
+                    anim.SetFloat("Attracted", 0);
                     anim.SetBool("isWalk", false);
                     anim.SetBool("inMouth", true);
                     anim.SetBool("isFear", false);

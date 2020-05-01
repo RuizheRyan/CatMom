@@ -76,22 +76,27 @@ public class CatController : MonoBehaviour
         {
             if (forwardHit.transform.CompareTag("kitten"))
             {
-                if(kitten != null && forwardHit.transform.name != kitten.name)
+                if (kitten != null && forwardHit.transform.name != kitten.name)
                 {
                     kitten?.GetComponent<AIController>().SetHighLight(false);
+                    kitten?.GetComponent<AIController>().ctrlTip.SetActive(false);
                 }
                 kitten = forwardHit.transform.gameObject;
-                kitten.GetComponent<AIController>().SetHighLight(true);
+                var kittenAC = kitten?.GetComponent<AIController>();
+                kittenAC.SetHighLight(true);
+                kittenAC.ctrlTip.SetActive(kittenAC.status == AIController.AIStatus.fear ? true : false);
             }
             else
             {
                 kitten?.GetComponent<AIController>().SetHighLight(false);
+                kitten?.GetComponent<AIController>().ctrlTip.SetActive(false);
                 kitten = null;
             }
         }
         else
         {
             kitten?.GetComponent<AIController>().SetHighLight(false);
+            kitten?.GetComponent<AIController>().ctrlTip.SetActive(false);
             kitten = null;
         }
         Debug.DrawLine(forwardRay.origin, forwardRay.origin + transform.forward * 0.75f, Color.green);

@@ -2615,7 +2615,7 @@ PrefabInstance:
     - target: {fileID: 9106983387223475270, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
         type: 3}
       propertyPath: replySoundPath
-      value: event:/Reply2
+      value: event:/Reply1
       objectReference: {fileID: 0}
     - target: {fileID: 9106983387223475271, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
         type: 3}
@@ -4084,7 +4084,7 @@ PrefabInstance:
     - target: {fileID: 9106983387223475270, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
         type: 3}
       propertyPath: replySoundPath
-      value: event:/Reply1
+      value: event:/Reply2
       objectReference: {fileID: 0}
     - target: {fileID: 9106983387223475271, guid: 64a1b910d70333c4987e4b4b1a3ef7c2,
         type: 3}
