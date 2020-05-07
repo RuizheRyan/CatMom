@@ -1,6 +1,9 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-8462865081990908649
+=======
+--- !u!114 &-8443615287498068312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,20 +13,54 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/CallBack
+  m_Name: event:/Purr
   m_EditorClassIdentifier: 
-  Path: event:/CallBack
-  guid: 9b6cdec18acfed49acc0b233364668aa
+  Path: event:/Purr
+  guid: 8598043857ae804692022f0cb22ff8e1
   Banks:
-  - {fileID: -4015683159608056820}
-  IsStream: 0
+  - {fileID: 5708799197026412732}
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1050
---- !u!114 &-6950823817616754009
+  Length: 8800
+--- !u!114 &-7825256811455610133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear 2/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-7662475271628499948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-6635538009867947215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +77,8 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-5047605179887875760
+--- !u!114 &-6463650581857284733
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,6 +87,110 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CallBack
+  m_EditorClassIdentifier: 
+  Path: event:/CallBack
+  guid: 9b6cdec18acfed49acc0b233364668aa
+  Banks:
+<<<<<<< HEAD
+  - {fileID: -4015683159608056820}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1050
+--- !u!114 &-6950823817616754009
+=======
+  - {fileID: 5708799197026412732}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6381135292916368779}
+  - {fileID: 1761994337598182154}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
+--- !u!114 &-6381135292916368779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &-6352795099768454570
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+<<<<<<< HEAD
+  m_Name: parameter:/Fear 2/Distance
+=======
+  m_Name: parameter:/Fear/Pitch
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
+<<<<<<< HEAD
+  Exists: 1
+--- !u!114 &-5047605179887875760
+=======
+  Exists: 0
+--- !u!114 &-6089312175220069886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CallBack
+  m_EditorClassIdentifier: 
+  Path: event:/CallBack
+  guid: 9b6cdec18acfed49acc0b233364668aa
+  Banks:
+  - {fileID: 5708799197026412732}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1050
+--- !u!114 &-5463414455532295198
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Fear 2
   m_EditorClassIdentifier: 
@@ -66,6 +208,82 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1600
 --- !u!114 &-4015683159608056820
+=======
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear 2/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &-4632592091489549097
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Distance
+  m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Path: ../LOC/Build/Desktop/Cat.bank
+  SubDir: 
+  lastModified: 637239005619289224
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2898540056894309844
+=======
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-4213187651240238794
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear 2/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+<<<<<<< HEAD
+  Exists: 1
+--- !u!114 &-2436263552382388572
+=======
+  Exists: 0
+--- !u!114 &-3070275803417912375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-1862764075219363529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,15 +293,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Cat.bank
+  m_Name: bank:/Cat.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../LOC/Build/Desktop/Cat.bank
+  Path: ../LOC/Build/Desktop/Cat.strings.bank
   SubDir: 
-  lastModified: 637239005619289224
+  lastModified: 637239023811331946
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
   Exists: 1
---- !u!114 &-2898540056894309844
+--- !u!114 &-101454927715287132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,8 +319,8 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
---- !u!114 &-2436263552382388572
+  Exists: 0
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,6 +329,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -1862764075219363529}
+  - {fileID: 5708799197026412732}
+  EditorEvents:
+  - {fileID: -6463650581857284733}
+  - {fileID: -8443615287498068312}
+  - {fileID: 1767340537431439974}
+  - {fileID: -6089312175220069886}
+  - {fileID: 2870959005334838436}
+  - {fileID: 2241179849509648441}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 5708799197026412732}
+  StringsBanks:
+  - {fileID: -1862764075219363529}
+  stringsBankWriteTime: 637239023811331946
+  cacheVersion: 3
+--- !u!114 &1761994337598182154
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Cat.strings.bank
   m_EditorClassIdentifier: 
@@ -121,6 +372,17 @@ MonoBehaviour:
     Value: 1036
   Exists: 1
 --- !u!114 &-456490526614747294
+=======
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fear/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1767340537431439974
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +392,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Fear
   m_EditorClassIdentifier: 
   Path: event:/Fear
@@ -146,6 +409,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1200
 --- !u!114 &11400000
+=======
+  m_Name: event:/Reply2
+  m_EditorClassIdentifier: 
+  Path: event:/Reply2
+  guid: 8d8bbf9a3211594aa1c361dd8838b2f8
+  Banks:
+  - {fileID: 5708799197026412732}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1400
+--- !u!114 &2241179849509648441
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,6 +433,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
@@ -175,6 +455,25 @@ MonoBehaviour:
   stringsBankWriteTime: 637239005619309170
   cacheVersion: 3
 --- !u!114 &1328201553990008869
+=======
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fear 2
+  m_EditorClassIdentifier: 
+  Path: event:/Fear 2
+  guid: e1c722b56a580745acb48aa90de22149
+  Banks:
+  - {fileID: 5708799197026412732}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6635538009867947215}
+  - {fileID: 8504830292619916146}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1600
+--- !u!114 &2870959005334838436
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,15 +482,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fear/Distance
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Reply1
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Name: Distance
   Min: 0
   Max: 1
   Default: 0
   Exists: 1
 --- !u!114 &1534397160795263181
+=======
+  Path: event:/Reply1
+  guid: b8ca8b1efbb8b5418e1ec7719342de5e
+  Banks:
+  - {fileID: 5708799197026412732}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1250
+--- !u!114 &3455244835162051204
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,6 +514,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Reply1
   m_EditorClassIdentifier: 
@@ -215,6 +530,18 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1250
 --- !u!114 &1897585139254393560
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.bank
+  m_EditorClassIdentifier: 
+  Path: ../LOC/Build/Desktop/Cat.bank
+  SubDir: 
+  lastModified: 637238969849320218
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5708799197026412732
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,6 +550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Reply2
   m_EditorClassIdentifier: 
@@ -238,6 +566,18 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1280
 --- !u!114 &4600232288723258901
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.bank
+  m_EditorClassIdentifier: 
+  Path: ../LOC/Build/Desktop/Cat.bank
+  SubDir: 
+  lastModified: 637239023811242186
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7345018577745637329
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,6 +586,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Fear/Pitch
   m_EditorClassIdentifier: 
@@ -255,6 +596,18 @@ MonoBehaviour:
   Default: 0
   Exists: 1
 --- !u!114 &5476733586495193217
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.bank
+  m_EditorClassIdentifier: 
+  Path: ../LOC/Build/Desktop/Cat.bank
+  SubDir: 
+  lastModified: 637239022716506255
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8504830292619916146
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,6 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Purr
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: event:/Purr
   guid: 8598043857ae804692022f0cb22ff8e1
   Banks:
@@ -277,3 +631,10 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 8800
+=======
+  Name: Pitch
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+>>>>>>> ce8230e7315334a2d02af7a451e72032e2b1b4dc
